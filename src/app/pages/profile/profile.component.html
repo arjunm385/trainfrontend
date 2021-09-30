@@ -1,0 +1,38 @@
+<mat-card *ngIf="user">
+  <!-- {{ user | json }} -->
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="container text-center">
+          <h1>Welcome {{ user.username }}</h1>
+          <img src="../../assets/img/852705.png" alt="" class="profile-image" />
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <table class="table text-center">
+              <tr>
+                <td>Username</td>
+                <td>{{ user.username }}</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>{{ user.phone }}</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>{{ user.authorities[0].authority }}</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>{{ user.enabled ? "Active" : "Unactive" }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+  </mat-card-actions>
+</mat-card>
