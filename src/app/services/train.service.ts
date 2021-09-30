@@ -15,13 +15,13 @@ export class TrainService {
   }
 
   public Alltrains() {
-    return this.https.get(`http://localhost:9848/train/all`);
+    return this.https.get(`${baseUrl}/train/all`);
   }
 
 
   searchTrain(search: any) {
     console.log("service layer" + search)
-    return this.https.get(`http://localhost:9848/train/route/all/` + search.start + `/` + search.end + `/` + search.date);
+    return this.https.get(`${baseUrl}/train/route/all/` + search.start + `/` + search.end + `/` + search.date);
   }
 
   
